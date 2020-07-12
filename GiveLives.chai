@@ -1,0 +1,38 @@
+print("Loading Give Lives...");
+
+var gl_game := getGame();
+var gl_input := gl_game.getWinInput();
+var gl_ptrs := gl_game.getCGameSystemPointers();
+var gl_towerManager := gl_ptrs.getCTowerManager();
+
+add_global(gl_game, "gl_game")
+add_global(gl_input, "gl_input")
+add_global(gl_ptrs, "gl_ptrs")
+add_global(gl_towerManager, "gl_towerManager")
+
+var gameData := gl_ptrs.getGameData();
+add_global(gameData, "gameData")
+
+if(!is_var_null(gameData))
+{
+    onKey(fun(key)
+    {
+    if(key=='1')
+    {
+        gameData.setHealth(gameData.getHealth() + 1)
+        print("Given 1 Life!");
+    }
+    if(key=='2')
+    {
+        gameData.setHealth(gameData.getHealth() + 5)
+        print("Given 5 Lives!");
+    }
+    if(key=='3')
+    {
+        gameData.setHealth(gameData.getHealth() + 10)
+        print("Given 10 Lives!");
+    }
+    });
+};
+
+print("Loaded Give Lives!");
