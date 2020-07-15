@@ -1,4 +1,4 @@
-# NKHook5-Plugins/Micro Challenge
+# NKHook5-Scripts/Micro Challenge
 
 You can read the description here and in the console of NKHook5. All of the 
 description is just copy and pasted from what I put as the description in the console.
