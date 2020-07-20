@@ -7,4 +7,5 @@ Description:
 
 You use this plugin by upgrading the tower you want
 the ID for and it's ID will be in the NKHook5 Console.
-Give Money and Lives is made by me, EpicGamer. Discord: EpicGamer#3273
+IDList Plugin Tool is made by me, EpicGamer with some help
+from Mallis. Discord: EpicGamer#3273

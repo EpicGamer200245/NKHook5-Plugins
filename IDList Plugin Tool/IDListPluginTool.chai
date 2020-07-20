@@ -16,4 +16,8 @@ onTowerUpgrade(fun(towerManager, tower, path)
     print(tower.getTypeFlag())
 });
 
+print("You use this plugin by upgrading the tower you want")
+print("the ID for and it's ID will be in the NKHook5 Console.")
+print("IDList Plugin Tool is made by me, EpicGamer with some help");
+print("from Mallis. Discord: EpicGamer#3273")
 print("Loaded IDList Plugin Tool!")
