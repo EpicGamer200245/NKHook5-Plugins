@@ -1,2 +1,2 @@
 # NKHook5-Plugins
-This is basically every one of my NKHook5 plugins.
+This is basically every single one of my NKHook5 plugins.
