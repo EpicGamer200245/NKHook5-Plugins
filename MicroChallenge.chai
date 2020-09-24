@@ -1,0 +1,34 @@
+print("Loading Micro Challenge...");
+
+var game := getGame();
+var input := game.getWinInput();
+var ptrs := game.getCGameSystemPointers();
+var towerManager := ptrs.getCTowerManager();
+var hasSetCash = true;
+
+add_global(game, "game")
+add_global(input, "input")
+add_global(ptrs, "ptrs")
+add_global(towerManager, "towerManager")
+
+print("How to play:")
+print("You play by starting any game. The way on how this challenge is you start with 550 cash")
+print("you can get cash but every second your cash resets back to 550. The reason why its")
+print("called the micro challenge is because you are supposed to buy towers sell those towers")
+print("so you have alot of money then with in 1 second to buy better towers.")
+print("Thank you Danny Parker because a lot of the code is based off of what he put in #general")
+print("Micro Challenge is somewhat made by me, EpicGamer. Discord: EpicGamer#3273")
+print("Loaded Micro Challenge!")
+
+while(true)
+{
+    var gameData := ptrs.getGameData();
+    if(!is_var_null(gameData))
+    { 
+        if(hasSetCash = true)
+        {
+            gameData.setCash(550);
+            Sleep(1000)
+        }
+    }
+}

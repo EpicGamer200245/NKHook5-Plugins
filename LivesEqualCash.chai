@@ -1,0 +1,26 @@
+print("Loading Lives Equal Cash...")
+
+var game := getGame();
+var input := game.getWinInput();
+var ptrs := game.getCGameSystemPointers();
+var towerManager := ptrs.getCTowerManager();
+
+add_global(game, "game")
+add_global(input, "input")
+add_global(ptrs, "ptrs")
+add_global(towerManager, "towerManager")
+
+print("The way on how this script works is that the cash")
+print("you have is divided by 10 and becomes your health.")
+print("Lives Equal Cash is made by me, EpicGamer. Discord: EpicGamer#3273")
+print("Loaded Lives Equal Cash!")
+
+while(true)
+{
+    var gameData := ptrs.getGameData()
+    if(!is_var_null(gameData))
+    {
+        var gameCash := gameData.getCash()
+        gameData.setHealth(gameCash/10)
+    }
+}

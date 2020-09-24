@@ -1,0 +1,59 @@
+print("Loading Give Money and Lives...");
+
+var gm_game := getGame();
+var gm_input := gm_game.getWinInput();
+var gm_ptrs := gm_game.getCGameSystemPointers();
+var gm_towerManager := gm_ptrs.getCTowerManager();
+
+add_global(gm_game, "gm_game")
+add_global(gm_input, "gm_input")
+add_global(gm_ptrs, "gm_ptrs")
+add_global(gm_towerManager, "gm_towerManager")
+
+onKey(fun(key)
+{
+    var gameData := gm_ptrs.getGameData();
+    if(!is_var_null(gameData))
+    {
+        if(key=='1')
+        {
+            gameData.setHealth(gameData.getHealth() + 50)
+            print("Given 50 Lives!");
+        }
+        if(key=='2')
+        {
+            gameData.setHealth(gameData.getHealth() + 100)
+            print("Given 100 Lives!");
+        }
+        if(key=='3')
+        {
+            gameData.setHealth(gameData.getHealth() + 300)
+            print("Given 300 Lives!");
+        }
+        if(key=='4')
+        {
+            gameData.setCash(gameData.getCash() + 50)
+            print("Given 50 cash!");
+        }
+        if(key=='5')
+        {
+            gameData.setCash(gameData.getCash() + 100)
+            print("Given 100 cash!");
+        }
+        if(key=='6')
+        {
+            gameData.setCash(gameData.getCash() + 300)
+            print("Given 300 cash!");
+        }
+    }
+});
+
+print("Controls:");
+print("1 - Gives 50 lives.");
+print("2 - Gives 100 lives.");
+print("3 - Gives 300 lives.");
+print("4 - Gives 50 cash.");
+print("5 - Gives 100 cash.");
+print("6 - Gives 300 cash.");
+print("Give Money and Lives is made by me, EpicGamer. Discord: EpicGamer#3273");
+print("Loaded Give Money and Lives!");
