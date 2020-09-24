@@ -1,3 +1,2 @@
-#Docs
-
-THis is the website for my scripts.
+# Docs
+This is for the website.
